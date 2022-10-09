@@ -1,14 +1,17 @@
 const canvas = document.getElementById("game")
-const format = document.getContext("2d")
+const format = canvas.getContext("2d")
 
-const ground = new Image();
-ground.src = "img/ground.png";
+const ground = new Image()
+ground.src = "style/img/ground.jpg"
 
 const food = new Image()
-food.src = "img/apple.png"
+food.src = "style/img/apple.png"
 
-const field = 48;
-const score = 0;
+let box = 48;
+let score = 0;
 
-//дано 
+function drawField() {
+	format.drawImage(ground, 0, 0)
+}
 
+let showField = setInterval(drawField, 100)
